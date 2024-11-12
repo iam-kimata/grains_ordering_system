@@ -1,0 +1,672 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --poppins: 'Poppins', sans-serif;
+    --lato: 'Lato', sans-serif;
+}
+
+#sidebar {
+    background: #F6F6F6;
+    width: 280px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    font-family: var(--lato);
+    z-index: 1000;
+}
+
+#sidebar .brand {
+    font-size: 24px;
+    font-weight: 700;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    color: #3C91E6;
+    text-decoration: none;
+    pointer-events: none;
+}
+
+#sidebar .brand .bx {
+    min-width: 60px;
+    display: flex;
+    justify-content: center;
+}
+
+#sidebar .side-menu {
+    width: 100%;
+    margin-top: 48px;
+}
+
+#sidebar .side-menu li {
+    height: 48px;
+    background: transparent;
+    margin-left: 6px;
+    border-radius: 48px 0 0 48px;
+    padding: 4px;
+    list-style: none;
+}
+
+#sidebar .side-menu li.active {
+    background: #FFF;
+    position: relative;
+}
+
+#sidebar .side-menu li.active a {
+    color: #3C91E6;
+}
+
+#sidebar .side-menu li.active::before {
+    content: '';
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    position: absolute;
+    top: -40px;
+    right: 0;
+    box-shadow: 20px 20px 0 #FFF;
+    z-index: -1;
+}
+
+#sidebar .side-menu li.active::after {
+    content: '';
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -40px;
+    right: 0;
+    box-shadow: 20px -20px 0 #FFF;
+    z-index: -1;
+}
+
+#sidebar .side-menu li a {
+    width: 100%;
+    height: 100%;
+    background: #F6F6F6;
+    display: flex;
+    align-items: center;
+    border-radius: 48px;
+    font-size: 16px;
+    color: black;
+    text-decoration: none;
+}
+
+#sidebar .side-menu li a.logout {
+    color: #D90429;
+}
+
+#sidebar .side-menu li a .bx {
+    display: flex;
+    justify-content: center;
+    min-width: calc(60px - ((4px + 6px) * 2)); 
+}
+
+#content {
+    position: relative;
+    width: calc(100% - 280px);
+    left: 280px;
+}
+
+#content nav {
+    height: 65px;
+    background: #F6F6F6;
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+    grid-gap: 34%;
+    position: relative;
+    font-family: var(--lato);
+}
+
+#content nav h3 {
+    font-size: 17px;
+}
+
+#content nav::before {
+    content: '';
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -40px;
+    left: 0;
+    box-shadow: -20px -20px 0 #F6F6F6;
+}
+
+#content nav form {
+    width: 100%;
+    max-width: 400px;
+    margin-right: auto;
+}
+
+#content nav form .form-input {
+    display: flex;
+    align-items: center;
+    height: 36px;
+}
+
+#content nav form .form-input input {
+    flex-grow: 1;
+    padding: 0 16px;
+    height: 100%;
+    border: none;
+    outline: none;
+    background: darkgrey;
+    border-radius: 36px 0 0 36px;
+}
+
+#content nav form .form-input button {
+    width: 36px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #3C91E6;
+    color: #FFF;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    border-radius: 0 36px 36px 0;
+    cursor: pointer;
+}
+
+#content nav .profile img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: darkgrey;
+    margin-left: 30rem;
+}
+
+    /*============ Customer dashboard styling ===============*/
+.container {
+    max-width: 1068px;
+    margin-left: 23%;
+    margin-right: auto;
+}
+
+.commodity-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 2rem; 
+    font-family: var(--poppins);
+    justify-content: center;
+    align-items: center; 
+}
+ 
+.commodity-container .box {
+    flex: 1 1 17rem;
+    max-width: 30%;
+    position: relative;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    background: #F6F6F6;
+    border-radius: 0.5rem;
+}
+ 
+.commodity-container .box img {
+    width: 100%;
+    height: 180px;
+    object-position: center;
+    margin-bottom: 1rem;
+    border-radius: 30px;
+}
+
+.commodity-container .box h3 {
+    font-size: 20px; 
+}
+
+.commodity-container .box span {
+    font-size: 15;
+    font-weight: 600;
+    color: black;
+}
+
+.commodity-container .box .bx {
+    font-size: 18px;
+    color: black;
+    margin: 0.8rem 0;
+}
+ 
+.commodity-container .box .btn {
+    max-width: 120px;
+}
+
+.btn {
+    background: #D90429;
+    color: #FFF;
+    padding: 10px 20px;
+    font-size: 15px;
+    font-weight: 400;
+    text-decoration: none;
+    border-radius: 8px;
+    border: none;  
+    cursor: pointer;
+}
+
+.info-message {
+    text-align: center;
+    width: 100%;
+    margin-top: 2rem; 
+    font-size: 18px;
+}
+
+    /*============ Order form styling ===============*/
+.order-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.user-details {
+    width: 420px;
+    background: #F6F6F6;
+    color: #2E2E2E;
+    border-radius: 10px;
+    padding: 40px 50px;
+    margin-left: 15%;
+    margin-top: 150px;
+}
+
+.user-details h1 {
+    text-align: center;
+    font-size: 34px;
+}
+
+.user-details .input-box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+}
+
+.user-details .input-box input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    border: 1px solid #3C91E6;
+    border-radius: 10px;
+    font-size: 16px;
+    color: black;
+    padding: 20px 45px 20px 20px;
+}
+
+.order-btn {
+    width: 100%;
+    height: 45px;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    background: darkgrey;
+    color: #FFF;
+    font-size: 20px;
+    cursor: pointer; 
+    transition: 0.5s;
+}
+
+.order-btn:hover {
+    background: #3C91E6;
+}
+
+    /*============ Staff dashboard ( Verify form ) styling ===============*/
+.verify-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.verify-details {
+    width: 420px;
+    background: #F6F6F6;
+    color: #2E2E2E;
+    border-radius: 10px;
+    padding: 40px 50px;
+    margin-top: 150px;
+}
+
+.verify-details h1 {
+    text-align: center;
+    font-size: 34px;
+}
+
+.verify-details .input-box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+}
+
+.verify-details .input-box input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    border: 1px solid #3C91E6;
+    border-radius: 10px;
+    font-size: 16px;
+    color: black;
+    padding: 20px 45px 20px 20px;
+}
+
+.verify-btn {
+    width: 100%;
+    height: 45px;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    background: darkgrey;
+    color: #FFF;
+    font-size: 20px;
+    cursor: pointer; 
+    transition: 0.5s;
+}
+
+.verify-btn:hover {
+    background: #3C91E6;
+}
+
+.btn-2 {
+    background: #3C91E6;
+    color: #FFF;
+    font-size: 15px;
+    padding: 8px;
+    border: none;
+    outline: none;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+    /*============ Admin dashboard styling ===============*/
+#content main {
+    width: 100%;
+    padding: 36px 24px;
+    font-family: var(--poppins);
+}
+
+#content main .box-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-gap: 24px;
+    margin-top: 36px;
+}
+
+#content main .box-info li {
+    padding: 24px;
+    background: darkgrey;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    grid-gap: 24px;
+    list-style: none;
+}
+
+#content main .box-info li .bx {
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
+    background: darkgrey;
+    font-size: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#content main .box-info li:nth-child(1) .bx {
+    background: #CFE8FF;
+    color: #3C91E6;
+}
+
+#content main .box-info li:nth-child(2) .bx {
+    background: #FFF2C6;
+    color: #FFCE26;
+}
+
+#content main .box-info li:nth-child(3) .bx {
+    background: #FFE0D3;
+    color: #FD7238;
+}
+
+#content main .box-info li .text {
+    font-size: 21px;
+    font-weight: 600;
+}
+
+#content main .table-data {
+    display: flex;
+    flex-wrap: wrap;
+    grid-gap: 24px;
+    margin-top: 24px;
+    color: black;
+    width: 100%;
+}
+
+#content main .table-data > div {
+    border-radius: 20px;
+    background: #F6F6F6;
+    padding: 24px;
+    overflow: auto;
+}
+
+#content main .table-data .head {
+    display: flex;
+    align-items: center;
+    grid-gap: 16px;
+    margin-bottom: 24px;
+    font-size: 25px;
+}
+
+#content main .table-data .head .bx {
+    font-size: 25px;
+    cursor: pointer;
+}
+
+#content main .table-data .order {
+    flex-grow: 1;
+    flex-basis: 500px;
+}
+
+#content main .table-data .order table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#content main .table-data .order table th {
+    text-align: left;
+    font-size: 13px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid darkgrey;
+}
+
+#content main .table-data .order table td {
+    padding: 16px 0;
+}
+
+.delete_btn {
+    background: red;
+    color: #FFF;
+    font-size: 13px;
+    padding: 8px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.update_btn {
+    background: green;
+    color: #FFF;
+    font-size: 13px;
+    padding: 8px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+    /*============ Update form styling ===============*/
+.update-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-2 {
+    width: 100%;
+    max-width: 400px;
+    background: darkgrey;
+    padding: 30px;
+    margin-top: 80px; 
+}
+
+.form-title {
+    text-align: center;
+    font-size: 26px;
+    font-weight: 600;
+    color: #FFF;
+    padding-bottom: 6px;
+    border-bottom: 1px solid #FFF;
+}
+
+.main-user-info {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+
+.user-input-box {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding-bottom: 8px;
+}
+
+.user-input-box label {
+    font-size: 20px;
+    font-weight: 400;
+    color: #FFF;
+    margin: 5px 0;
+}
+
+.user-input-box input {
+    height: 40px;
+    width: 100%;
+    border-radius: 7px;
+    border: none;
+    outline: none;
+    padding: 0 10px;
+}
+
+.form-submit-btn {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    border: none;
+    border-radius: 8px;
+    color: black;
+    margin: 15px 0 0;
+    font-size: 18px;
+    cursor: pointer;  
+    transition: 0.5s;
+}
+
+.form-submit-btn:hover {
+    background: green;
+    color: #FFF;
+}
+
+    /*============ Upload form styling ===============*/
+.upload-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.upload-details {
+    width: 420px;
+    background: #F6F6F6;
+    color: #2E2E2E;
+    border-radius: 10px;
+    padding: 40px 50px;
+    margin-top: 55px;
+}
+
+.upload-details h1 {
+    text-align: center;
+    font-size: 34px;
+}
+
+.upload-details .commodity {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+}
+
+.upload-details .commodity input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    border: 1px solid black;
+    border-radius: 10px;
+    font-size: 16px;
+    color: black;
+    padding: 20px 45px 20px 20px;
+}
+
+.upload-details .commodity input[type="file"] {
+    background: #FFF;
+    color: gray;
+}
+
+.upload-btn {
+    height: 45px;
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    background: darkgrey;
+    color: #FFF;
+    font-size: 20px;
+    cursor: pointer; 
+}
+
+.success-message {
+    text-align: center;
+    color: #3C91E6;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.error-message {
+    text-align: center;
+    color: red;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.status-pending {
+    color: orange;
+}
+
+.status-completed {
+    color: green;
+}
+
+.status-approved {
+    color: #3C91E6;
+}
+
+.status-unknown {
+    color: gray;
+}
+
+    
+    
