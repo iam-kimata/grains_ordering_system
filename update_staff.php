@@ -26,7 +26,7 @@ if(isset($_POST["submit"])){
 <!DOCTYPE html>
 <html lang="en">
 
-<?php include('templates-2/admin.php'); ?>
+<?php include('shared-2/admin.php'); ?>
 
         <div class="content">
             <div class = "update-form"> 
