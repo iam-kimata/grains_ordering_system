@@ -134,7 +134,7 @@
 
     /*============ About Us Section Styling ===============*/
 .about-us {
-    padding: 218px 100px;
+    padding: 200px 100px;
     height: 100vh;
 }
 
@@ -198,9 +198,14 @@
     margin-right: 100px;
     font-size: 20px;
     font-weight: 700;
-    color: darkblue;
+    color: black;
     position: relative;
     cursor: pointer;
+}
+
+.tab-links.active-link {
+    color: darkblue;  
+   
 }
 
 .tab-contents {
