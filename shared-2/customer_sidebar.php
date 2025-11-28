@@ -7,7 +7,6 @@ error_reporting(0);
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style_2.css">
     <link rel="stylesheet" href="boxicons-2.1.4/css/boxicons.min.css">
@@ -17,19 +16,19 @@ error_reporting(0);
     <section id="sidebar">
         <a href="#" class="brand">
             <i class="bx bxs-smile"></i>
-            <span>StaffHub</span>
+            <span>CustomerHub</span>
         </a>
         <ul class="side-menu">
             <li class="active">
-                <a href="staff_dashboard.php">
+                <a href="customer_dashboard.php">
                     <i class="bx bxs-dashboard"></i>
                     <span>Dashboard</span>
                 </a>
             </li>
             <li>
-                <a href="approved_order.php">
+                <a href="my_order.php">
                     <i class="bx bx-history"></i>
-                    <span>Approved Orders</span>
+                    <span>My History</span>
                 </a>
             </li>
         </ul>
@@ -46,12 +45,12 @@ error_reporting(0);
     <!--=========================== Content Section ===========================-->
     <section id="content">
         <nav>
-            <h3><i>Welcome to Staff Dashboard</i></h3>
-            <form action="staff_dashboard.php" method="POST">
+            <h3><i>Welcome to Customer Dashboard</i></h3>
+            <form action="customer_dashboard.php" method="POST">
                 <div class="form-input">
-                    <input type="search" name="search" placeholder="Search payment">
+                    <input type="search" name="search" placeholder="Search commodity">
                     <button type="submit" class="search-btn"><i class="bx bx-search"></i></button>
                 </div>
             </form>
         </nav>
-    
+    </section>

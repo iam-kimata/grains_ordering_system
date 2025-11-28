@@ -260,7 +260,6 @@
     font-size: 18px;
 }
 
-    /*============ Order form styling ===============*/
 .order-form {
     display: flex;
     align-items: center;
@@ -318,7 +317,7 @@
     background: #3C91E6;
 }
 
-    /*============ Staff dashboard ( Verify form ) styling ===============*/
+    /*============ Staff dashboard styling ===============*/
 .verify-form {
     display: flex;
     align-items: center;
@@ -510,7 +509,6 @@
     border-radius: 5px;
 }
 
-    /*============ Update form styling ===============*/
 .update-form {
     display: flex;
     align-items: center;
@@ -581,7 +579,6 @@
     color: #FFF;
 }
 
-    /*============ Upload form styling ===============*/
 .upload-form {
     display: flex;
     align-items: center;

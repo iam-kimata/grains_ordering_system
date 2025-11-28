@@ -34,7 +34,7 @@ if(isset($_POST['submit'])){
 <!DOCTYPE html>
 <html lang="en">
 
-<?php include('shared-2/customer.php'); ?>
+<?php include('shared-2/customer_sidebar.php'); ?>
 
     <div class="order-form">
         <div class="user-details">

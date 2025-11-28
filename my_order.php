@@ -15,7 +15,7 @@ $query = mysqli_query($conn, $sql);
 <html lang="en">
 <title>Dashboard</title>
 
-<?php include('shared-2/customer.php'); ?>
+<?php include('shared-2/customer_sidebar.php'); ?>
     
     <section id="content">
         <main>

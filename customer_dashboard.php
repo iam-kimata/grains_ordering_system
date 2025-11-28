@@ -24,7 +24,7 @@ $query = mysqli_query($conn, $sql);
 <!DOCTYPE html>
 <html lang="en">
 
-<?php include('shared-2/customer.php'); ?>
+<?php include('shared-2/customer_sidebar.php'); ?>
 
 <section class="commodity">
     <div class="commodity-container container">

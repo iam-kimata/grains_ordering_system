@@ -1,13 +1,7 @@
-<?php
-
-error_reporting(0);
-
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style_2.css">
     <link rel="stylesheet" href="boxicons-2.1.4/css/boxicons.min.css">
@@ -17,19 +11,31 @@ error_reporting(0);
     <section id="sidebar">
         <a href="#" class="brand">
             <i class="bx bxs-smile"></i>
-            <span>CustomerHub</span>
+            <span>AdminHub</span>
         </a>
         <ul class="side-menu">
             <li class="active">
-                <a href="customer_dashboard.php">
+                <a href="admin_dashboard.php">
                     <i class="bx bxs-dashboard"></i>
                     <span>Dashboard</span>
                 </a>
             </li>
             <li>
-                <a href="my_order.php">
-                    <i class="bx bx-history"></i>
-                    <span>My History</span>
+                <a href="customers.php">
+                    <i class="bx bxs-group"></i>
+                    <span>Customers</span>
+                </a>
+            </li>
+            <li>
+                <a href="staffs.php">
+                    <i class="bx bxs-group"></i>
+                    <span>Staffs</span>
+                </a>
+            </li>
+            <li>
+                <a href="upload_commodities.php">
+                    <i class="bx bx-cloud-upload"></i>
+                    <span>Upload Commodities</span>
                 </a>
             </li>
         </ul>
@@ -46,12 +52,8 @@ error_reporting(0);
     <!--=========================== Content Section ===========================-->
     <section id="content">
         <nav>
-            <h3><i>Welcome to Customer Dashboard</i></h3>
-            <form action="customer_dashboard.php" method="POST">
-                <div class="form-input">
-                    <input type="search" name="search" placeholder="Search commodity">
-                    <button type="submit" class="search-btn"><i class="bx bx-search"></i></button>
-                </div>
-            </form>
+            <h3><i>Welcome to Admin Dashboard</i></h3>
+            <a href="#" class="profile">
+                <img src="images/dashboard.png" alt="An image of admin">
+            </a>
         </nav>
-    </section>

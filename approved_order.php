@@ -35,7 +35,7 @@ if (isset($_POST['search'])) {
 <!DOCTYPE html>
 <html lang="en">
 
-<?php include('shared-2/staff.php'); ?>
+<?php include('shared-2/staff_sidebar.php'); ?>
 
         <main>
             <div class="table-data">

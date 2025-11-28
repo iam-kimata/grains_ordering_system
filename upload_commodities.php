@@ -46,7 +46,7 @@ if (isset($_SESSION['success_message'])) {
 <!DOCTYPE html>
 <html lang="en">
 
-<?php include('shared-2/admin.php'); ?>
+<?php include('shared-2/admin_sidebar.php'); ?>
 
         <div class="upload-form">
             <div class="upload-details">
